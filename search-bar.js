@@ -27,11 +27,11 @@
         }
 
         get value() {
-            return this.getAttribute('value');
+            return this.shadowRoot.querySelector('#search').getAttribute('value', newVal);
         }
 
         set value(newVal) {
-            this.setAttribute('value', newVal);
+            this.shadowRoot.querySelector('#search').setAttribute('value', newVal);
         }
     }
 
